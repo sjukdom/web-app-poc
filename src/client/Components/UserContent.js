@@ -1,7 +1,14 @@
 
 import React from 'react';
 import {render} from 'react-dom';
-import {Paper, AppBar, Tabs, Tab, Typography, withStyles} from '@material-ui/core';
+import {Paper, 
+        AppBar, 
+        Tabs, 
+        Tab, 
+        Typography, 
+        withStyles, 
+        MuiThemeProvider, 
+        createMuiTheme} from '@material-ui/core';
 
 const style = {
     Paper: {
@@ -27,6 +34,17 @@ function TabContainer(props) {
     );
 }
 
+const theme = createMuiTheme({
+    palette: {
+        secondary: {
+            main: '#FF0000'
+        },
+        primary: {
+          main: '#383838',
+        }
+    },
+  });
+
 class UserContent extends React.Component {
 
     state = {
@@ -45,13 +63,15 @@ class UserContent extends React.Component {
             return(
                     <div >
                         <Paper className={classes.root}>
-                            <AppBar position='relative' >
+                            <MuiThemeProvider theme={theme}>
+                            <AppBar position='relative' color='primary'>
                                 <Tabs value={value}  onChange={this.handleChange}>
                                     <Tab label="Artista" />
                                     <Tab label="Album" />
                                     <Tab label="Cancion" />
                                 </Tabs>
                             </AppBar>
+                            </MuiThemeProvider>
                             {value === 0 && <TabContainer>Item One</TabContainer>}
                             {value === 1 && <TabContainer>Item Two</TabContainer>}
                             {value === 2 && <TabContainer>Item Three</TabContainer>}
