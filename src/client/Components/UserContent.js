@@ -9,6 +9,7 @@ import {Paper,
         withStyles, 
         MuiThemeProvider, 
         createMuiTheme} from '@material-ui/core';
+import SongList from './SongList';
 
 const style = {
     Paper: {
@@ -72,9 +73,12 @@ class UserContent extends React.Component {
                                 </Tabs>
                             </AppBar>
                             </MuiThemeProvider>
-                            {value === 0 && <TabContainer>Item One</TabContainer>}
+                            {
+                                value === 0 && <SongList/>
+                            }
+                            {/* {value === 0 && <TabContainer>Item One</TabContainer>}
                             {value === 1 && <TabContainer>Item Two</TabContainer>}
-                            {value === 2 && <TabContainer>Item Three</TabContainer>}
+                            {value === 2 && <TabContainer>Item Three</TabContainer>} */}
                         </Paper>
                     </div>
             );
