@@ -76,9 +76,12 @@ class UserContent extends React.Component {
                             {
                                 value === 0 && <SongList/>
                             }
-                            {/* {value === 0 && <TabContainer>Item One</TabContainer>}
-                            {value === 1 && <TabContainer>Item Two</TabContainer>}
-                            {value === 2 && <TabContainer>Item Three</TabContainer>} */}
+                            {
+                                value === 1 && <SongList/>
+                            }
+                                                        {
+                                value === 2
+                            }
                         </Paper>
                     </div>
             );
