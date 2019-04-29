@@ -24,7 +24,7 @@ class App extends React.Component {
                                                 <ArtistContent/>
                                         </Grid>
                                         <Grid item xs={12}>
-                                                <Player song_info={'Kase.O, Como el sol'}/>
+                                                <Player song_info={'Reproductor'}/>
                                         </Grid>
                                 </Grid>
                         </div>
