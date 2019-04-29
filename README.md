@@ -8,9 +8,14 @@ Para que se pueda ejecutar el proyecto se necesita tener instalado:
 Para inicializar el proyecto de node.js e instalar los modulos, se debe 
 ejecutar en la terminal el siguiente script, dependiendo del sistema operativo:
 
-MacOSmacos/Linux:
+MacOS/Linux:
 ```
 ./init.sh
+```
+
+Windows:
+```
+
 ```
 
 Cuando se instalen todos los modulos, ejecutar en terminales distintas 
