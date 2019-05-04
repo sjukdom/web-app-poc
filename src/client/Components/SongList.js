@@ -1,27 +1,14 @@
 
 import React from 'react';
-import {Paper, 
-        AppBar, 
-        Tabs, 
-        Tab, 
-        Typography, 
-        withStyles, 
-        MuiThemeProvider, 
-        createMuiTheme} from '@material-ui/core';
-
+import {withStyles} from '@material-ui/core';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 const styles = theme => ({
-    // root: {
-    //   width: '100%',
-    //   maxWidth: 500,
-    //   backgroundColor: theme.palette.background.paper,
-    // },
     root: {
         width: '100%',
-        maxWidth: 480,
+        maxWidth: 550,
         backgroundColor: theme.palette.background.paper,
         position: 'fixed',
         overflow: 'scroll',
