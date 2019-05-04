@@ -13,14 +13,16 @@ class App extends React.Component {
         render() {
                 return(
                         <div>
-                                <Grid container spacing={8}> 
+                                <Grid container 
+                                      spacing={0}       
+                                > 
                                         <Grid item xs={12}>
                                                 <Navbar items={10} />
                                         </Grid>
                                         <Grid item xs={5}>
                                                 <UserContent/>
                                         </Grid>
-                                        <Grid item xs={7}>
+                                        <Grid item xs>
                                                 <ArtistContent/>
                                         </Grid>
                                         <Grid item xs={12}>
