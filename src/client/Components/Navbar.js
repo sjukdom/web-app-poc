@@ -10,7 +10,9 @@ import {
   IconButton,
   Badge,
   withStyles,
-  MenuItem
+  MenuItem,
+  MuiThemeProvider, 
+  createMuiTheme
 } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search';
 import {
@@ -20,12 +22,14 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const searchBarWidth = 300;
-const searchBarMargin = 40;
+const searchBarMargin = 35;
 
 const styles = theme => ({
 
   root: {
     width: '100%',
+    flexGrow: 0,
+    border: 0,
   },
 
   grow: {
@@ -88,7 +92,23 @@ const styles = theme => ({
       display: 'flex',
     },
   },
-})
+
+  appBar: {
+    top: 'auto',
+    bottom: 0,
+  }
+});
+
+const theme = createMuiTheme({
+  palette: {
+      secondary: {
+          main: '#FF0000'
+      },
+      primary: {
+        main: '#383838',
+      }
+  },
+});
 
 class Navbar extends Component {
 
@@ -110,7 +130,7 @@ class Navbar extends Component {
     if (event.key === 'Enter') {
       let text = event.target.value;
       if (text.length === 0) {
-        console.log('v a c i o...');
+        console.log('Empty field');
       } else {
         console.log(text);
       }
@@ -158,7 +178,8 @@ class Navbar extends Component {
 
     return ( 
     <div className = {classes.root} >
-      <AppBar position = "static" >
+    <MuiThemeProvider theme={theme}>
+      <AppBar position = "static" color='primary'>
       <Toolbar>
       <Typography className = {classes.title} variant = "h6" color = "inherit" noWrap >
       Portal del cliente 
@@ -198,7 +219,9 @@ class Navbar extends Component {
       </IconButton> 
       </div > 
       </Toolbar> 
-      </AppBar > {renderMenu} 
+      </AppBar >
+      </MuiThemeProvider>
+      {renderMenu} 
       </div>
     );
   }

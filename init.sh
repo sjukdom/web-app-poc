@@ -2,13 +2,13 @@
 # Inicializacion del proyecto
 npm init --yes
 # Instalacion de modulos
-npm install express morgan oracledb
-npm install @babel/core @babel/preset-env @babel/preset-react babel-loader -D 
-npm install @babel/plugin-proposal-class-properties
-npm install nodemon -D
-npm install react react-dom react-scripts
+npm install express morgan mysql oracledb --silent
+npm install react react-dom react-scripts --silent
 npm install webpack webpack-cli 
-npm install @material-ui/core @material-ui/icons
+npm install @material-ui/core @material-ui/icons --silent 
+npm install nodemon -D --silent
+npm install @babel/core @babel/preset-env @babel/preset-react babel-loader -D --silent 
+npm install @babel/plugin-proposal-class-properties -D --silent
 
 # Agregar scripts al archivo package.json
 node << EOF
