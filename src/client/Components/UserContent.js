@@ -74,10 +74,10 @@ class UserContent extends React.Component {
                             </AppBar>
                             </MuiThemeProvider>
                             {
-                                value === 0 && <SongList/>
+                                value === 0 && <SongList songs={Array.from(Array(10).keys())}/>
                             }
                             {
-                                value === 1 && <SongList/>
+                                value === 1 && <SongList songs={[]}/>
                             }
                                                         {
                                 value === 2
