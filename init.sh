@@ -4,7 +4,7 @@ npm init --yes
 # Instalacion de modulos
 npm install express morgan mysql oracledb --silent
 npm install react react-dom react-scripts --silent
-npm install webpack webpack-cli 
+npm install webpack webpack-cli --silent
 npm install @material-ui/core @material-ui/icons --silent 
 npm install nodemon -D --silent
 npm install @babel/core @babel/preset-env @babel/preset-react babel-loader -D --silent 
