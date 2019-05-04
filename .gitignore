@@ -2,7 +2,6 @@ node_modules/
 .tern-project
 npm-debug.log
 .vscode
-package.json
 package-lock.json
 .gitignore.swp
 src/public/bundle.js
