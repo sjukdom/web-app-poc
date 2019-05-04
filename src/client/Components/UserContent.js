@@ -53,7 +53,7 @@ class UserContent extends React.Component {
         return (
             <div>
                 <MuiThemeProvider theme={theme}>
-                    <AppBar position='relative' color='primary' >
+                    <AppBar position='relative' color='primary' className={classes.AppBar}>
                         <Tabs value={value}  onChange={this.handleChange}>
                         <Tab label="Artista" />
                         <Tab label="Album" />
