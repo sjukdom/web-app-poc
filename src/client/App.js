@@ -17,10 +17,10 @@ class App extends React.Component {
                                         <Grid item xs={12}>
                                                 <Navbar items={10} />
                                         </Grid>
-                                        <Grid item xs={4.5}>
+                                        <Grid item xs={5}>
                                                 <UserContent/>
                                         </Grid>
-                                        <Grid item xs>
+                                        <Grid item xs={7}>
                                                 <ArtistContent/>
                                         </Grid>
                                         <Grid item xs={12}>
