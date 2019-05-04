@@ -12,7 +12,7 @@ const styles = theme => ({
         backgroundColor: theme.palette.background.paper,
         position: 'fixed',
         overflow: 'scroll',
-        maxHeight: 440,
+        maxHeight: 426,
       },
       listSection: {
         backgroundColor: 'inherit',
