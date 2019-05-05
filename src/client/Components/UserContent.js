@@ -48,13 +48,13 @@ class UserContent extends React.Component {
     render() {
 
         const { classes } = this.props;
-        const {value} = this.state;
+        const { value } = this.state;
 
         return (
             <div>
                 <MuiThemeProvider theme={theme}>
                     <AppBar position='relative' color='primary' className={classes.AppBar}>
-                        <Tabs value={value}  onChange={this.handleChange}>
+                        <Tabs variant='fullWidth' value={value}  onChange={this.handleChange}>
                         <Tab label="Artista" />
                         <Tab label="Album" />
                         <Tab label="Cancion" />
@@ -68,7 +68,7 @@ class UserContent extends React.Component {
                     value === 1 && <SongList songs={Array.from(Array(15).keys())}/>     
                 }             
                 {
-                    value === 2 && <SongList songs={Array.from(Array(15).keys())}/>
+                    value === 2 && <SongList songs={Array.from(Array(5).keys())}/>
                 }
                 </div>
             )
