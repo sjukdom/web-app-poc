@@ -11,7 +11,11 @@ import {
 import SongList from './SongList';
 
 const styles = theme => ({
+    root: {
+        width: 'auto'
+    },
     AppBar: {
+        width: 'auto',
         bottom: -10
     }
 });
@@ -51,7 +55,7 @@ class UserContent extends React.Component {
         const { value } = this.state;
 
         return (
-            <div>
+            <div className={classes.root}>
                 <MuiThemeProvider theme={theme}>
                     <AppBar position='relative' color='primary' className={classes.AppBar}>
                         <Tabs variant='fullWidth' value={value}  onChange={this.handleChange}>
@@ -70,7 +74,7 @@ class UserContent extends React.Component {
                 {
                     value === 2 && <SongList songs={Array.from(Array(5).keys())}/>
                 }
-                </div>
+            </div>
             )
     }
 }
