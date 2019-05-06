@@ -47,6 +47,8 @@ npm run webpack
 npm start
 ```
 
+Abrir el navegador de su preferencia y escribir la direccion: _localhost:3000_
+
 ## Sitio web hasta ahora
 El sitio web tiene la siguiente interfaz gráfica por el momento:
 
