@@ -1,7 +1,6 @@
 
 import React from 'react';
-import {render} from 'react-dom';
-import {Paper, 
+import {
         AppBar, 
         Tabs, 
         Tab, 
@@ -11,20 +10,14 @@ import {Paper,
         createMuiTheme} from '@material-ui/core';
 import SongList from './SongList';
 
-const style = {
-    Paper: {
-            padding: 230, 
-            marginTop: 10, 
-            marginBottom: 10
-    },
-}
-
 const styles = theme => ({
     root: {
-      flexGrow: 1,
-      backgroundColor: theme.palette.background.paper,
-      width: 480,
+        width: 'auto'
     },
+    AppBar: {
+        width: 'auto',
+        bottom: -10
+    }
 });
 
 function TabContainer(props) {
@@ -59,32 +52,30 @@ class UserContent extends React.Component {
     render() {
 
         const { classes } = this.props;
-        const {value} = this.state;
+        const { value } = this.state;
 
-            return(
-                    <div >
-                        <Paper className={classes.root}>
-                            <MuiThemeProvider theme={theme}>
-                            <AppBar position='relative' color='primary'>
-                                <Tabs value={value}  onChange={this.handleChange}>
-                                    <Tab label="Artista" />
-                                    <Tab label="Album" />
-                                    <Tab label="Cancion" />
-                                </Tabs>
-                            </AppBar>
-                            </MuiThemeProvider>
-                            {
-                                value === 0 && <SongList/>
-                            }
-                            {
-                                value === 1 && <SongList/>
-                            }
-                                                        {
-                                value === 2
-                            }
-                        </Paper>
-                    </div>
-            );
+        return (
+            <div className={classes.root}>
+                <MuiThemeProvider theme={theme}>
+                    <AppBar position='relative' color='primary' className={classes.AppBar}>
+                        <Tabs variant='fullWidth' value={value}  onChange={this.handleChange}>
+                        <Tab label="Artista" />
+                        <Tab label="Album" />
+                        <Tab label="Cancion" />
+                        </Tabs>
+                    </AppBar> 
+                </MuiThemeProvider>
+                {
+                   value === 0 && <SongList songs={Array.from(Array(15).keys())}/>
+                }
+                {
+                    value === 1 && <SongList songs={Array.from(Array(15).keys())}/>     
+                }             
+                {
+                    value === 2 && <SongList songs={Array.from(Array(5).keys())}/>
+                }
+            </div>
+            )
     }
 }
 
