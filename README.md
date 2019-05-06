@@ -12,6 +12,11 @@ sudo apt install git
 
 Windows: descargar la __git bash__ de la pagina https://git-scm.com/.
 
+Se descarga de la siguiente forma:
+```
+git clone https://github.com/sjukdom/web-app-poc.git
+```
+
 ## Descarga de node.js
 
 Para que se pueda ejecutar el proyecto se necesita tener instalado:
