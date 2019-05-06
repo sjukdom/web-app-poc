@@ -46,7 +46,3 @@ npm start
 El sitio web tiene la siguiente interfaz gráfica por el momento:
 
 ![](images/website.png)
-<<<<<<< HEAD
-=======
-
->>>>>>> testing
