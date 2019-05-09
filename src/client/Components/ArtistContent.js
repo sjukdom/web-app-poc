@@ -6,7 +6,7 @@ import {Paper, withStyles} from '@material-ui/core';
 const styles = {
     root: {
       width: 'auto',
-      height: '650px'
+      height: '640px'
     },
     Paper: {
             padding: 220,

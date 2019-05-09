@@ -8,11 +8,12 @@ import ListItemText from '@material-ui/core/ListItemText';
 const styles = theme => ({
     root: {
         width: 'auto',
-        height: '100%',
+        //height: '100%',
+        height: 'inherit',
         backgroundColor: theme.palette.background.paper,
         position: 'relative',
         overflow: 'scroll',
-        maxHeight: 426,
+        //maxHeight: 426,
       },
       ul: {
         backgroundColor: 'inherit',

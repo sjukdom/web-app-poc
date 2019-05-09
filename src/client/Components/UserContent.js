@@ -13,7 +13,7 @@ import SongList from './SongList';
 const styles = theme => ({
     root: {
         width: 'auto',
-        height: '650px'
+        height: '595px'
     },
     AppBar: {
         width: 'auto',
