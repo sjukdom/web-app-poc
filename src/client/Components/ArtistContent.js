@@ -1,22 +1,28 @@
 
 import React from 'react';
 import {render} from 'react-dom';
-import {Paper} from '@material-ui/core';
+import {Paper, withStyles} from '@material-ui/core';
 
-const style = {
+const styles = {
+    root: {
+      width: 'auto',
+      height: '650px'
+    },
     Paper: {
-            padding: 230, 
-            marginTop: 10, 
+            padding: 220,
+            marginTop: 10,
             marginBottom: 10,
-            
     },
 }
 
 class UserContent extends React.Component {
     render() {
+
+      const {classes} = this.props;
+
             return(
-                    <div>
-                        <Paper style={style.Paper}>
+                    <div className={classes.root}>
+                        <Paper className={classes.Paper}>
                             Right pane
                         </Paper>
                     </div>
@@ -24,4 +30,4 @@ class UserContent extends React.Component {
     }
 }
 
-export default UserContent;
+export default withStyles(styles)(UserContent);

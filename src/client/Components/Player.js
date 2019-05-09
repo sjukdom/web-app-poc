@@ -4,7 +4,7 @@ import {
     Toolbar,
     Typography,
     withStyles,
-    MuiThemeProvider, 
+    MuiThemeProvider,
     createMuiTheme,
     LinearProgress
   } from '@material-ui/core';
@@ -23,7 +23,7 @@ const theme = createMuiTheme({
 
 const styles = theme => ({
     appBar: {
-        
+
     },
 })
 
@@ -35,22 +35,23 @@ class Player extends React.Component {
 
     render() {
 
-        let props = this.props;
+        var {classes} = this.props;
+        var {song_info} = this.props;
 
         return (
-            <div>
+            <div className={classes.root}>
                 <MuiThemeProvider theme={theme}>
-                <AppBar position="relative" color="secondary" className={styles.appBar}>
+                <AppBar position="relative" color="secondary" className={classes.appBar}>
                     <Toolbar>
                         <Typography variant="title" color="inherit">
-                        {props.song_info}
+                        {song_info}
                         </Typography>
-                        
+
                     </Toolbar>
                 </AppBar>
                 </MuiThemeProvider>
             </div>
-            
+
         )
     }
 
