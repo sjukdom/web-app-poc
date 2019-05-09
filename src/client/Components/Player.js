@@ -22,8 +22,11 @@ const theme = createMuiTheme({
 });
 
 const styles = theme => ({
-    appBar: {
+    root: {
 
+    },
+    appBar: {
+      top: 15
     },
 })
 
@@ -46,7 +49,6 @@ class Player extends React.Component {
                         <Typography variant="title" color="inherit">
                         {song_info}
                         </Typography>
-
                     </Toolbar>
                 </AppBar>
                 </MuiThemeProvider>
