@@ -4,11 +4,15 @@ import {render} from 'react-dom';
 import {Paper, withStyles} from '@material-ui/core';
 import AlbumGridList from './AlbumGridList';
 
+const wHeight = window.innerHeight;
+const artistContentHeight = 0.7*wHeight
+console.log(artistContentHeight.toString()+'%')
+
 const styles = {
     root: {
       width: 'auto',
       height: '640px',
-      overflow: 'scroll'
+      overflow: 'scroll',
     },
     Paper: {
             padding: 220,

@@ -6,10 +6,15 @@ import {
     withStyles,
     MuiThemeProvider,
     createMuiTheme,
-    LinearProgress
+    LinearProgress,
+    IconButton
   } from '@material-ui/core';
 import {fade} from '@material-ui/core/styles/colorManipulator';
-import {PlayCircleFilledOutlined} from '@material-ui/icons';
+import {PlayCircleOutline,
+        PauseCircleOutLine,
+        Pause,
+        SkipNext,
+        SkipPrevious} from '@material-ui/icons';
 
 
 
@@ -26,7 +31,7 @@ const styles = theme => ({
 
     },
     appBar: {
-      top: 15
+      top: 5
     },
 })
 
@@ -46,9 +51,15 @@ class Player extends React.Component {
                 <MuiThemeProvider theme={theme}>
                 <AppBar position="relative" color="secondary" className={classes.appBar}>
                     <Toolbar>
-                        <Typography variant="title" color="inherit">
-                        {song_info}
-                        </Typography>
+                        <IconButton>
+                            <SkipPrevious/>
+                        </IconButton>
+                        <IconButton>
+                            <PlayCircleOutline/>
+                        </IconButton>
+                        <IconButton>
+                            <SkipNext/>
+                        </IconButton>
                     </Toolbar>
                 </AppBar>
                 </MuiThemeProvider>
@@ -58,5 +69,9 @@ class Player extends React.Component {
     }
 
 }
+
+// <Typography variant="title" color="inherit">
+// {song_info}
+// </Typography>
 
 export default withStyles(styles)(Player);

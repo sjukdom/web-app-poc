@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import {GridList, GridListTile} from '@material-ui/core';
+import {GridList, GridListTile, Paper} from '@material-ui/core';
 import SongList from './SongList';
 
 const styles = theme => ({
@@ -25,12 +25,12 @@ class AlbumGridList extends React.Component {
 
       return (
         <div className={classes.root}>
-          <GridList cellHeight={212} className={classes.gridList} cols={2} spacing={1}>
-                    {searchData.map(album => (
-                      <GridListTile key={album.id} cols={2}>
-                        <SongList songs={Array.from(Array(10).keys())}/>
-                      </GridListTile>
-                    ))}
+          <GridList cellHeight={212} className={classes.gridList} spacing={1}>
+              {searchData.map(album => (
+                  <GridListTile key={album.id}>
+                    <SongList songs={Array.from(Array(10).keys())}/>
+                  </GridListTile>
+                ))}
           </GridList>
         </div>
       );
