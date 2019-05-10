@@ -5,7 +5,7 @@ import SongList from './SongList';
 
 const styles = theme => ({
   root: {
-    display: 'flex',
+    //display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
@@ -27,8 +27,9 @@ class AlbumGridList extends React.Component {
         <div className={classes.root}>
           <GridList cellHeight={212} className={classes.gridList} spacing={1}>
               {searchData.map(album => (
-                  <GridListTile key={album.id}>
-                    <SongList songs={Array.from(Array(10).keys())}/>
+                  <GridListTile key={album.id} cols={2}>
+                    <Paper> Fuuuuck This </Paper>
+                    <SongList songs={Array.from(Array(11).keys())}/>
                   </GridListTile>
                 ))}
           </GridList>
