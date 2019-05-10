@@ -52,4 +52,4 @@ Abrir el navegador de su preferencia y escribir la direccion: _localhost:3000_
 ## Sitio web hasta ahora
 El sitio web tiene la siguiente interfaz gráfica por el momento:
 
-![](images/website-02.png)
+![](images/website-03.png)
