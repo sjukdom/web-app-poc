@@ -1,18 +1,19 @@
 
 import React from 'react';
 import {
-        AppBar, 
-        Tabs, 
-        Tab, 
-        Typography, 
-        withStyles, 
-        MuiThemeProvider, 
+        AppBar,
+        Tabs,
+        Tab,
+        Typography,
+        withStyles,
+        MuiThemeProvider,
         createMuiTheme} from '@material-ui/core';
 import SongList from './SongList';
 
 const styles = theme => ({
     root: {
-        width: 'auto'
+        width: 'auto',
+        height: '595px'
     },
     AppBar: {
         width: 'auto',
@@ -31,7 +32,7 @@ function TabContainer(props) {
 const theme = createMuiTheme({
     palette: {
         secondary: {
-            main: '#FF0000'
+            main: '#1db954'
         },
         primary: {
           main: '#383838',
@@ -63,14 +64,14 @@ class UserContent extends React.Component {
                         <Tab label="Album" />
                         <Tab label="Cancion" />
                         </Tabs>
-                    </AppBar> 
+                    </AppBar>
                 </MuiThemeProvider>
                 {
                    value === 0 && <SongList songs={Array.from(Array(15).keys())}/>
                 }
                 {
-                    value === 1 && <SongList songs={Array.from(Array(15).keys())}/>     
-                }             
+                    value === 1 && <SongList songs={Array.from(Array(15).keys())}/>
+                }
                 {
                     value === 2 && <SongList songs={Array.from(Array(5).keys())}/>
                 }

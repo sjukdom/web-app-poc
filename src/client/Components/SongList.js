@@ -8,10 +8,12 @@ import ListItemText from '@material-ui/core/ListItemText';
 const styles = theme => ({
     root: {
         width: 'auto',
+        //height: '100%',
+        height: 'inherit',
         backgroundColor: theme.palette.background.paper,
         position: 'relative',
         overflow: 'scroll',
-        maxHeight: 426,
+        //maxHeight: 426,
       },
       ul: {
         backgroundColor: 'inherit',
@@ -23,7 +25,7 @@ const styles = theme => ({
         margin:0,
       }
 });
-        
+
 class SongList extends React.Component {
     state = {
         selectedIndex: 1,
@@ -42,7 +44,7 @@ class SongList extends React.Component {
                 <List>
                     <ul className={classes.ul}>
                         {songs.map(item => (
-                        <ListItem button 
+                        <ListItem button
                             key={`item-${item}`}
                             selected={this.state.selectedIndex === item}
                             onClick={event => this.handleListItemClick(event, item)}
@@ -58,7 +60,7 @@ class SongList extends React.Component {
         } else {
           return (
             <div className={classes.root}>
-            
+
             </div>
           )
         }

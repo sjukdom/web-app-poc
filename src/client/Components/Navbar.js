@@ -11,7 +11,7 @@ import {
   Badge,
   withStyles,
   MenuItem,
-  MuiThemeProvider, 
+  MuiThemeProvider,
   createMuiTheme
 } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search';
@@ -102,7 +102,7 @@ const styles = theme => ({
 const theme = createMuiTheme({
   palette: {
       secondary: {
-          main: '#FF0000'
+          main: '#1db954'
       },
       primary: {
         main: '#383838',
@@ -144,8 +144,8 @@ class Navbar extends Component {
     const { items } = this.props;
     const isMenuOpen = Boolean(anchorEl);
 
-    const renderMenu = ( 
-      <Menu 
+    const renderMenu = (
+      <Menu
       anchorEl = {
         anchorEl
       }
@@ -169,26 +169,26 @@ class Navbar extends Component {
       } >
       <MenuItem onClick = {
         this.handleMenuClose
-      }> Perfil </MenuItem> 
+      }> Perfil </MenuItem>
       <MenuItem onClick = {
         this.handleMenuClose
-      }> Salir </MenuItem>  
+      }> Salir </MenuItem>
       </Menu >
     );
 
-    return ( 
+    return (
     <div className = {classes.root} >
     <MuiThemeProvider theme={theme}>
       <AppBar position = "static" color='primary'>
       <Toolbar>
       <Typography className = {classes.title} variant = "h6" color = "inherit" noWrap >
-      Portal del cliente 
-      </Typography> 
+      Portal del cliente
+      </Typography>
       <div className = {classes.search}>
       <div className = {classes.searchIcon}>
       <SearchIcon/>
-      </div> 
-      <InputBase 
+      </div>
+      <InputBase
         placeholder = ""
         classes = {
           {
@@ -199,16 +199,16 @@ class Navbar extends Component {
         onKeyDown = {
           this.handleSubmitSearch
         }
-      /> 
-      </div > 
-      <div className = {classes.grow}/> 
+      />
+      </div >
+      <div className = {classes.grow}/>
       <div className = {classes.sectionDesktop}>
       <IconButton color = "inherit" >
         <Badge badgeContent = {items} color = "secondary" >
           <ShoppingCartIcon / >
-        </Badge> 
-      </IconButton > 
-      <IconButton 
+        </Badge>
+      </IconButton >
+      <IconButton
       aria-owns = {isMenuOpen ? 'material-appbar' : undefined}
       aria-haspopup = 'true'
       onClick = {
@@ -216,12 +216,12 @@ class Navbar extends Component {
       }
       color = 'inherit'>
         <AccountCircle/>
-      </IconButton> 
-      </div > 
-      </Toolbar> 
+      </IconButton>
+      </div >
+      </Toolbar>
       </AppBar >
       </MuiThemeProvider>
-      {renderMenu} 
+      {renderMenu}
       </div>
     );
   }
