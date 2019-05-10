@@ -1,7 +1,7 @@
 
 import React from 'react';
 import {render} from 'react-dom';
-import {Paper, withStyles} from '@material-ui/core';
+import {withStyles} from '@material-ui/core';
 import AlbumGridList from './AlbumGridList';
 
 const wHeight = window.innerHeight;
@@ -13,29 +13,31 @@ const styles = {
       width: 'auto',
       height: '640px',
       overflow: 'scroll',
+      marginTop: '10px'
     },
-    Paper: {
-            padding: 220,
-            marginTop: 10,
-            marginBottom: 10,
-            heigh: '100%'
-    },
+    abmGridList: {
+      bottom: -10
+    }
 }
 
-// class ArtistContent extends React.Component {
-//     render() {
-//
-//       const {classes} = this.props;
-//
-//             return(
-//                     <div className={classes.root}>
-//                         <Paper className={classes.Paper}>
-//                             Right pane
-//                         </Paper>
-//                     </div>
-//             );
-//     }
-// }
+var searchData = [
+  {
+    id: 0,
+    data: 'aue'
+  },
+  {
+    id: 1,
+    data:'2323'
+  },
+  {
+    id: 2,
+    data:'22'
+  },
+  {
+    id: 3,
+    data: '232'
+  }
+]
 
 class ArtistContent extends React.Component {
     render() {
@@ -43,8 +45,8 @@ class ArtistContent extends React.Component {
       const {classes} = this.props;
 
             return(
-                    <div className={classes.root}>
-                      <AlbumGridList searchData={[{id:0, data: 'aue'}, {id: 1, data:'2323'}, {id:2,data:'22'},{id:3,data:'232'}]}/>
+                    <div className={classes.root} position="relative">
+                      <AlbumGridList searchData={searchData} className={classes.abmGridList}/>
                     </div>
             );
     }

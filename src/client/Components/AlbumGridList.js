@@ -1,11 +1,18 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import {GridList, GridListTile, Paper} from '@material-ui/core';
+import {GridList, GridListTile, Paper, Typography, createMuiTheme, MuiThemeProvider} from '@material-ui/core';
 import SongList from './SongList';
+
+const theme = createMuiTheme({
+    palette: {
+        secondary: {
+            main: '#ffffff'
+        }
+    },
+});
 
 const styles = theme => ({
   root: {
-    display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
@@ -14,7 +21,16 @@ const styles = theme => ({
   gridList: {
     width: 'auto',
     height: 'inherit',
+    //bottom: -10
   },
+  gridListTile: {
+    //bottom: -10
+  },
+  paper: {
+    padding: 5,
+    background: '#383838',
+    textAlign: 'center',
+  }
 });
 
 class AlbumGridList extends React.Component {
@@ -25,34 +41,23 @@ class AlbumGridList extends React.Component {
 
       return (
         <div className={classes.root}>
-          <GridList cellHeight={212} className={classes.gridList} spacing={1}>
+          <GridList cellHeight={270} className={classes.gridList} spacing={1}>
               {searchData.map(album => (
-                  <GridListTile key={album.id}>
-                    <SongList songs={Array.from(Array(10).keys())}/>
+                  <GridListTile key={album.id} cols={2} className={classes.gridListTile}>
+                    <Paper className={classes.paper}>
+                    <MuiThemeProvider theme={theme}>
+                      <Typography color="secondary">
+                        Artista: Nombre album
+                      </Typography>
+                    </MuiThemeProvider>
+                    </Paper>
+                    <SongList songs={Array.from(Array(11).keys())}/>
                   </GridListTile>
                 ))}
           </GridList>
         </div>
       );
   }
-
 }
-
-// render () {
-//   const {classes} = this.props;
-//   const {searchData} = this.props;
-//
-//     return (
-//       <div className={classes.root}>
-//         <GridList cellHeight={160} className={classes.gridList} cols={1}>
-//           {searchData.map(album => (
-//             <GridListTile key={album.id} cols={1}>
-//             reer
-//             </GridListTile>
-//           ))}
-//         </GridList>
-//       </div>
-//     );
-// }
 
 export default withStyles(styles)(AlbumGridList);
