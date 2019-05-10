@@ -39,18 +39,34 @@ class Player extends React.Component {
 
     state = {
         onPlay: 0,
+        volume: 0,
     };
+
+    handleVolumeChange = event => {
+        this.setState({
+            volume: event.target.value
+        });
+        console.log(event.target.value);
+    }
 
     render() {
 
         var {classes} = this.props;
         var {song_info} = this.props;
+        var {onPlay} = this.state;
+        var {volume} = this.state;
 
         return (
             <div className={classes.root}>
                 <MuiThemeProvider theme={theme}>
                 <AppBar position="relative" color="secondary" className={classes.appBar}>
                     <Toolbar>
+                        <div className={classes.volumeSong}>
+                            <input id="vol-control" type="range" min="0" max="100" step="1"
+                                onChange={this.handleVolumeChange}>
+                            </input>
+                        </div>
+                        <div className={classes.buttons}>
                         <IconButton>
                             <SkipPrevious/>
                         </IconButton>
@@ -60,6 +76,7 @@ class Player extends React.Component {
                         <IconButton>
                             <SkipNext/>
                         </IconButton>
+                        </div>
                     </Toolbar>
                 </AppBar>
                 </MuiThemeProvider>
