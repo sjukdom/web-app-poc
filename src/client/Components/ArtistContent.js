@@ -1,7 +1,7 @@
 
 import React from 'react';
 import {render} from 'react-dom';
-import {Paper, withStyles} from '@material-ui/core';
+import {withStyles} from '@material-ui/core';
 import AlbumGridList from './AlbumGridList';
 
 const wHeight = window.innerHeight;
@@ -13,14 +13,11 @@ const styles = {
       width: 'auto',
       height: '640px',
       overflow: 'scroll',
-      top: 10
+      marginTop: '10px'
     },
-    Paper: {
-            padding: 220,
-            marginTop: 10,
-            marginBottom: 10,
-            heigh: '100%'
-    },
+    abmGridList: {
+      bottom: -10
+    }
 }
 
 var searchData = [
@@ -48,8 +45,8 @@ class ArtistContent extends React.Component {
       const {classes} = this.props;
 
             return(
-                    <div className={classes.root}>
-                      <AlbumGridList searchData={searchData}/>
+                    <div className={classes.root} position="relative">
+                      <AlbumGridList searchData={searchData} className={classes.abmGridList}/>
                     </div>
             );
     }

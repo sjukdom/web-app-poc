@@ -21,15 +21,14 @@ const styles = theme => ({
   gridList: {
     width: 'auto',
     height: 'inherit',
+    //bottom: -10
   },
   gridListTile: {
-    bottom: -10
+    //bottom: -10
   },
   paper: {
     padding: 5,
     background: '#383838',
-    alignItems: 'center',
-    justifyContent: 'center',
     textAlign: 'center',
   }
 });
@@ -59,7 +58,6 @@ class AlbumGridList extends React.Component {
         </div>
       );
   }
-
 }
 
 export default withStyles(styles)(AlbumGridList);
