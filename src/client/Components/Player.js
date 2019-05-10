@@ -20,14 +20,17 @@ import SongProgBar from './SongProgBar';
 const theme = createMuiTheme({
     palette: {
         secondary: {
-            main: '#383838'
+            main: '#383838',
+        },
+        primary: {
+            main: '#FFFFFF',
         }
     },
 });
 
 const styles = theme => ({
     root: {
-        width: '100%'
+        width: '100%',
     },
     grow: {
       flexGrow: 1,
@@ -40,7 +43,7 @@ const styles = theme => ({
         marginLeft: 20,
     },
     songName: {
-        width: '300px',
+        width: '350px',
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
@@ -92,13 +95,13 @@ class Player extends React.Component {
                             </input>
                         </div>
                         <div className={classes.buttons}>
-                        <IconButton>
+                        <IconButton color="primary">
                             <SkipPrevious/>
                         </IconButton>
-                        <IconButton>
+                        <IconButton color="primary">
                             <PlayCircleOutline/>
                         </IconButton>
-                        <IconButton>
+                        <IconButton color="primary">
                             <SkipNext/>
                         </IconButton>
                         </div>
