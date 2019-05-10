@@ -27,11 +27,37 @@ const theme = createMuiTheme({
 
 const styles = theme => ({
     root: {
-
+        width: '100%'
+    },
+    grow: {
+      flexGrow: 1,
     },
     appBar: {
-      top: 5
+      top: 5,
     },
+    volumeSong: {
+        marginRight:20,
+        marginLeft: 20,
+    },
+    songName: {
+        width: '300px',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        marginRight: 15,
+        marginLeft: 15,
+        overflow: 'hidden'
+    },
+    buttons: {
+        textAlign: 'center',
+        marginRight:20,
+        marginLeft: 20,
+    },
+    progBar: {
+        float: 'right',
+        marginRight:20,
+        marginLeft: 20
+    }
 })
 
 class Player extends React.Component {
@@ -65,11 +91,6 @@ class Player extends React.Component {
                                 onChange={this.handleVolumeChange}>
                             </input>
                         </div>
-                        <div className={classes.songName}>
-                            <Typography variant="title" color="inherit">
-                            {song_info}
-                            </Typography>
-                        </div>
                         <div className={classes.buttons}>
                         <IconButton>
                             <SkipPrevious/>
@@ -81,6 +102,12 @@ class Player extends React.Component {
                             <SkipNext/>
                         </IconButton>
                         </div>
+                        <div className={classes.songName}>
+                            <Typography variant="title" color="inherit">
+                            {song_info}
+                            </Typography>
+                        </div>
+                        <div className = {classes.grow}/>
                         <div className={classes.progBar}>
                             <SongProgBar />
                         </div>

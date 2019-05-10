@@ -7,7 +7,7 @@ const styles = {
   },
   progBar: {
       height: '10px',
-      width: '100px',
+      width: '400px',
   }
 };
 
