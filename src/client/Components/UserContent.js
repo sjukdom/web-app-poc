@@ -32,7 +32,7 @@ function TabContainer(props) {
 const theme = createMuiTheme({
     palette: {
         secondary: {
-            main: '#FF0000'
+            main: '#1db954'
         },
         primary: {
           main: '#383838',

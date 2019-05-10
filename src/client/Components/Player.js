@@ -23,7 +23,8 @@ const theme = createMuiTheme({
             main: '#383838',
         },
         primary: {
-            main: '#FFFFFF',
+            //main: '#e00808',
+            main: '#1db954'
         }
     },
 });
@@ -60,7 +61,7 @@ const styles = theme => ({
         float: 'right',
         marginRight:20,
         marginLeft: 20
-    }
+    },
 })
 
 class Player extends React.Component {
