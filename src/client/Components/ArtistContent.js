@@ -13,6 +13,7 @@ const styles = {
       width: 'auto',
       height: '640px',
       overflow: 'scroll',
+      top: 10
     },
     Paper: {
             padding: 220,
@@ -22,20 +23,24 @@ const styles = {
     },
 }
 
-// class ArtistContent extends React.Component {
-//     render() {
-//
-//       const {classes} = this.props;
-//
-//             return(
-//                     <div className={classes.root}>
-//                         <Paper className={classes.Paper}>
-//                             Right pane
-//                         </Paper>
-//                     </div>
-//             );
-//     }
-// }
+var searchData = [
+  {
+    id: 0,
+    data: 'aue'
+  },
+  {
+    id: 1,
+    data:'2323'
+  },
+  {
+    id: 2,
+    data:'22'
+  },
+  {
+    id: 3,
+    data: '232'
+  }
+]
 
 class ArtistContent extends React.Component {
     render() {
@@ -44,7 +49,7 @@ class ArtistContent extends React.Component {
 
             return(
                     <div className={classes.root}>
-                      <AlbumGridList searchData={[{id:0, data: 'aue'}, {id: 1, data:'2323'}, {id:2,data:'22'},{id:3,data:'232'}]}/>
+                      <AlbumGridList searchData={searchData}/>
                     </div>
             );
     }
