@@ -15,8 +15,7 @@ import {PlayCircleOutline,
         Pause,
         SkipNext,
         SkipPrevious} from '@material-ui/icons';
-
-
+import SongProgBar from './SongProgBar';
 
 const theme = createMuiTheme({
     palette: {
@@ -66,6 +65,11 @@ class Player extends React.Component {
                                 onChange={this.handleVolumeChange}>
                             </input>
                         </div>
+                        <div className={classes.songName}>
+                            <Typography variant="title" color="inherit">
+                            {song_info}
+                            </Typography>
+                        </div>
                         <div className={classes.buttons}>
                         <IconButton>
                             <SkipPrevious/>
@@ -76,6 +80,9 @@ class Player extends React.Component {
                         <IconButton>
                             <SkipNext/>
                         </IconButton>
+                        </div>
+                        <div className={classes.progBar}>
+                            <SongProgBar />
                         </div>
                     </Toolbar>
                 </AppBar>
