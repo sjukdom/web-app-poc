@@ -11,7 +11,6 @@ import {
   } from '@material-ui/core';
 import {fade} from '@material-ui/core/styles/colorManipulator';
 import {PlayCircleOutline,
-        PauseCircleOutLine,
         Pause,
         SkipNext,
         SkipPrevious} from '@material-ui/icons';
@@ -67,7 +66,7 @@ const styles = theme => ({
 class Player extends React.Component {
 
     state = {
-        onPlay: 0,
+        onPlay: true,
         volume: 0,
     };
 
@@ -78,6 +77,13 @@ class Player extends React.Component {
         console.log(event.target.value);
     }
 
+    handlePlayButton = event => {
+        this.setState({
+            onPlay: !this.state.onPlay
+        })
+        console.log(this.state.onPlay);
+    }
+
     render() {
 
         var {classes} = this.props;
@@ -85,48 +91,81 @@ class Player extends React.Component {
         var {onPlay} = this.state;
         var {volume} = this.state;
 
-        return (
-            <div className={classes.root}>
-                <MuiThemeProvider theme={theme}>
-                <AppBar position="relative" color="secondary" className={classes.appBar}>
-                    <Toolbar>
-                        <div className={classes.volumeSong}>
-                            <input id="vol-control" type="range" min="0" max="100" step="1"
-                                onChange={this.handleVolumeChange}>
-                            </input>
-                        </div>
-                        <div className={classes.buttons}>
-                        <IconButton color="primary">
-                            <SkipPrevious/>
-                        </IconButton>
-                        <IconButton color="primary">
-                            <PlayCircleOutline/>
-                        </IconButton>
-                        <IconButton color="primary">
-                            <SkipNext/>
-                        </IconButton>
-                        </div>
-                        <div className={classes.songName}>
-                            <Typography variant="title" color="inherit">
-                            {song_info}
-                            </Typography>
-                        </div>
-                        <div className = {classes.grow}/>
-                        <div className={classes.progBar}>
-                            <SongProgBar />
-                        </div>
-                    </Toolbar>
-                </AppBar>
-                </MuiThemeProvider>
-            </div>
-
-        )
+        if (onPlay === true) {
+            return (
+                <div className={classes.root}>
+                    <MuiThemeProvider theme={theme}>
+                    <AppBar position="relative" color="secondary" className={classes.appBar}>
+                        <Toolbar>
+                            <div className={classes.volumeSong}>
+                                <input id="vol-control" type="range" min="0" max="100" step="1"
+                                    onChange={this.handleVolumeChange}>
+                                </input>
+                            </div>
+                            <div className={classes.buttons}>
+                            <IconButton color="primary">
+                                <SkipPrevious/>
+                            </IconButton>
+                            <IconButton color="primary" onClick={this.handlePlayButton}>
+                                <PlayCircleOutline/>
+                            </IconButton>
+                            <IconButton color="primary">
+                                <SkipNext/>
+                            </IconButton>
+                            </div>
+                            <div className={classes.songName}>
+                                <Typography variant="title" color="inherit">
+                                {song_info}
+                                </Typography>
+                            </div>
+                            <div className = {classes.grow}/>
+                            <div className={classes.progBar}>
+                            <SongProgBar playingM={!onPlay}/>
+                            </div>
+                        </Toolbar>
+                    </AppBar>
+                    </MuiThemeProvider>
+                </div>
+            )
+        } else {
+            return (
+                <div className={classes.root}>
+                    <MuiThemeProvider theme={theme}>
+                    <AppBar position="relative" color="secondary" className={classes.appBar}>
+                        <Toolbar>
+                            <div className={classes.volumeSong}>
+                                <input id="vol-control" type="range" min="0" max="100" step="1"
+                                    onChange={this.handleVolumeChange}>
+                                </input>
+                            </div>
+                            <div className={classes.buttons}>
+                            <IconButton color="primary">
+                                <SkipPrevious/>
+                            </IconButton>
+                            <IconButton color="primary" onClick={this.handlePlayButton}>
+                                <Pause/>
+                            </IconButton>
+                            <IconButton color="primary">
+                                <SkipNext/>
+                            </IconButton>
+                            </div>
+                            <div className={classes.songName}>
+                                <Typography variant="title" color="inherit">
+                                {song_info}
+                                </Typography>
+                            </div>
+                            <div className = {classes.grow}/>
+                            <div className={classes.progBar}>
+                                <SongProgBar playingM={!onPlay}/>
+                            </div>
+                        </Toolbar>
+                    </AppBar>
+                    </MuiThemeProvider>
+                </div>
+            )
+        }
     }
 
 }
-
-// <Typography variant="title" color="inherit">
-// {song_info}
-// </Typography>
 
 export default withStyles(styles)(Player);

@@ -7,12 +7,10 @@ import ListItemText from '@material-ui/core/ListItemText';
 const styles = theme => ({
     root: {
         width: 'auto',
-        //height: '100%',
         height: 'inherit',
         backgroundColor: theme.palette.background.paper,
         position: 'relative',
         overflow: 'scroll',
-        //maxHeight: 426,
       },
       ul: {
         backgroundColor: 'inherit',
@@ -28,6 +26,7 @@ const styles = theme => ({
 class ASongList extends React.Component {
     state = {
         selectedIndex: 0,
+
     };
 
     handleListItemClick = (event, index) => {
