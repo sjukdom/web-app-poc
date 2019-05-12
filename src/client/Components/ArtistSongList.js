@@ -44,7 +44,7 @@ class ASongList extends React.Component {
                     <ul className={classes.ul}>
                         {songs.map(item => (
                         <ListItem button
-                            key={`item-${item}`}
+                            key={item.id}
                             selected={this.state.selectedIndex === item}
                             onClick={event => this.handleListItemClick(event, item)}
                             className={classes.li}

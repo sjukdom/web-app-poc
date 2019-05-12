@@ -1,11 +1,13 @@
 [
-{
+{  
+   "id": 0,
 	"nombre": "Kase.O",
 	"direccion": "Zaragosa, España",
 	"telefono": "5557072908",
 	"email": "kaseo@gmail.com",
 	"albums": [
 		{
+         "id": 100,
 			"titulo": "Rompecabezas",
 			"canciones": [
 				"Intro",
@@ -24,6 +26,7 @@
 			"precio": 150
 		},
 		{
+         "id": 101,
 			"titulo": "Dos Rombos",
 			"canciones": [
 				"Intro 95",
@@ -40,6 +43,7 @@
 			"precio": 150
 		},
 		{
+         "id": 102,
 			"titulo": "Jazz Magnetism",
 			"canciones": [
 				"Libertad",
@@ -61,6 +65,7 @@
 			"precio": 200
 		},
 		{
+         "id": 103,
 			"titulo": "El Circulo",
 			"canciones": [
 				   "Intro (El Círculo)",
@@ -86,12 +91,14 @@
 	]
 },
 {
+   "id": 1,
 	"nombre": "Iron Maiden",
 	"direccion": "Worksop, Nottinghamshire",
 	"telefono": "5566674058",
    "email": "ironmaiden@gmail.com",
    "albums": [
       {
+         "id": 200,
          "titulo": "Iron Maiden",
          "canciones": [
             "Prowler",
@@ -107,6 +114,7 @@
          "precio": 220
       },
       {
+         "id": 201,
          "titulo": "Killers",
          "canciones": [
             "The Ides of March",
@@ -123,6 +131,7 @@
          "precio": 220
       },
       {
+         "id": 202,
          "titulo": "The number of the beast",
          "canciones": [
             "Invaders",
@@ -137,6 +146,7 @@
          "precio": 220
       },
       {
+         "id": 203,
          "titulo": "Piece of mind",
          "canciones": [
             "Aces High",
@@ -151,6 +161,7 @@
          "precio": 220
       },
       {
+         "id": 204,
          "titulo": "Powerslave",
          "canciones": [
             "Where Eagles Dare",
@@ -168,12 +179,14 @@
    ]
 },
 {
+   "id": 2,
 	"nombre": "Venom",
 	"direccion": "England",
 	"telefono": "5566674058",
    "email": "venombm@gmail.com",
    "albums": [
       {
+         "id": 205,
          "titulo": "Welcome to Hell",
          "canciones": [
             "Sons of Satan",
@@ -191,6 +204,7 @@
          "precio": 200
       },
       {
+         "id": 206,
          "titulo": "Black Metal",
          "canciones": [
             "Black Metal",
@@ -210,12 +224,14 @@
    ]
 },
 {
+   "id": 3,
 	"nombre": "Nach",
 	"direccion": "Albacete, España",
 	"telefono": "5507556766",
    "email": "nach_scratch@gmail.com",
    "albums": [
       {
+         "id": 300,
          "titulo": "Posesia Difusa",
          "canciones": [
             "El regreso",
@@ -241,6 +257,7 @@
          "precio": 250
       },
       {
+         "id": 301,
          "titulo": "Ars Magna",
          "canciones": [
             "Alfa",
@@ -266,12 +283,14 @@
    ]
 },
 {
+   "id": 4,
 	"nombre": "Sho-Hai",
 	"direccion": "Zaragosa, España",
 	"telefono": "5544557809",
    "email": "sho_hai@gmail.com",
    "albums": [
       {
+         "id": 400,
          "titulo": "Doble Vida",
          "canciones": [
             "Entro",
@@ -293,6 +312,7 @@
          "precio": 220
       },
       {
+         "id": 401,
          "titulo": "La ultima funcion",
          "canciones": [
             "El preferido de la luna",
@@ -316,12 +336,14 @@
    ]
 },
 {
+   "id": 5,
 	"nombre": "Cartel de Santa",
 	"direccion": "Monterrey, Nuevo Leon, Mexico",
 	"telefono": "5500776323",
    "email": "ppcdsalvc@gmail.com",
    "albums": [
       {
+         "id": 500,
          "titulo": "Cartel de Santa",
          "canciones": [
             "Intro",
@@ -348,6 +370,7 @@
          "precio": 200
       },
       {
+         "id": 501,
          "titulo": "Volumen ProIIIbido",
          "canciones": [
             "Mira quien vuelve al 100",
@@ -368,12 +391,14 @@
    ]
 },
 {
+   "id": 6,
 	"nombre": "Crystal Castles",
 	"direccion": "Toronto, Ontario, Ca",
 	"telefono": "5570747879",
    "email": "crystalcastlesn@gmail.com",
    "albums": [
       {
+         "id": 600,
          "titulo": "Crystal Castles",
          "canciones": [
             "Untrust Us",
@@ -396,6 +421,7 @@
          "precio": 200
       },
       {
+         "id": 601,
          "titulo": "Crystal Castles II",
          "canciones": [
             "Fainting Spells",
@@ -418,12 +444,14 @@
    ]
 },
 {
+   "id": 7,
 	"nombre": "Lil Peep",
 	"direccion": "Allentown, Pensilvania",
 	"telefono": "5529343482",
    "email": "lilpeep@gmail.com",
    "albums": [
       {
+         "id": 700,
          "titulo": "Come Over When You are Sober",
          "canciones": [
             "Broken Smile (My All)",
@@ -443,12 +471,14 @@
    ]
 },
 {
+   "id": 8,
 	"nombre": "Snoop Dogg",
 	"direccion": "Long Beach, California, Estados Unidos",
 	"telefono": "5542042042",
    "email": "snoopfuckingdogg@gmail.com",
    "albums": [
       {
+         "id": 800,
          "titulo": "Tha Doggfather",
          "canciones": [
             "Intro",
@@ -476,6 +506,7 @@
          "precio": 350
       },
       {
+         "id": 801,
          "titulo": "Doggumentary",
          "canciones": [
             "Toyz N Da Hood",

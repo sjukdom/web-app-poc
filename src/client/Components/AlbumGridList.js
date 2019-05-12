@@ -21,10 +21,6 @@ const styles = theme => ({
   gridList: {
     width: 'auto',
     height: 'inherit',
-    //bottom: -10
-  },
-  gridListTile: {
-    //bottom: -10
   },
   paper: {
     padding: 5,
@@ -44,7 +40,7 @@ class AlbumGridList extends React.Component {
               {searchData.map(data => (
                     <GridList cellHeight={270} className={classes.gridList} cols={1} spacing={1}>
                     {data.albums.map(album => (
-                      <GridListTile key={data._id} cols={1} className={classes.gridListTile}>
+                      <GridListTile key={album.id} cols={1} className={classes.gridListTile}>
                       <Paper className={classes.paper}>
                       <MuiThemeProvider theme={theme}>
                         <Typography color="secondary">

@@ -8,6 +8,7 @@ const artistaSchema = mongoose.Schema({
    email: String,
    albums: [
       {
+         id: Number,
          titulo: String,
          canciones: Array,
          precio: Number
