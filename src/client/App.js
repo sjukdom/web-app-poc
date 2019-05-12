@@ -10,6 +10,21 @@ import {withStyles,
         Paper} from '@material-ui/core';
 
 class App extends React.Component {
+
+        state = {
+                searchArtist: null,
+                songSelected: ""
+        }
+
+        searchResult = search => {
+                this.setState({searchArtist: search});
+                console.log(this.state.searchArtist)
+        }
+
+        selectedSong = song => {
+                this.setState({songSelected: song});
+        }
+
         render() {
                 return(
                         <div>
@@ -17,16 +32,16 @@ class App extends React.Component {
                                       spacing={0}
                                 >
                                         <Grid item md={12} lg={12} xl={12}>
-                                                <Navbar items={10} />
+                                                <Navbar items={7} search={this.searchResult}/>
                                         </Grid>
                                         <Grid item md={5} lg={5} xl={5}>
-                                                <UserContent/>
+                                                <UserContent songSelected={this.selectedSong}/>
                                         </Grid>
                                         <Grid item md lg xl>
-                                                <ArtistContent/>
+                                                <ArtistContent content={this.state.searchArtist} />
                                         </Grid>
                                         <Grid item md={12} lg={12} xl={12}>
-                                                <Player song_info={'Artista : Nombre cancion'}/>
+                                                <Player song_info={this.state.songSelected}/>
                                         </Grid>
                                 </Grid>
                         </div>

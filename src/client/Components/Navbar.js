@@ -131,8 +131,18 @@ class Navbar extends Component {
       let text = event.target.value;
       if (text.length === 0) {
         console.log('Empty field');
+        fetch('/api/artistas/all', {method: 'GET'})
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+        });
       } else {
         console.log(text);
+        fetch(`/api/artistas/nombre/${text}`, {method: 'GET'})
+        .then(res => res.json())
+        .then(data => {
+          this.props.search(data);
+        });
       }
     }
   };
@@ -226,6 +236,5 @@ class Navbar extends Component {
     );
   }
 }
-
 
 export default withStyles(styles)(Navbar);

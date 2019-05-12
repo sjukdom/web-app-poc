@@ -20,36 +20,50 @@ const styles = {
     }
 }
 
-var searchData = [
-  {
-    id: 0,
-    data: 'aue'
-  },
-  {
-    id: 1,
-    data:'2323'
-  },
-  {
-    id: 2,
-    data:'22'
-  },
-  {
-    id: 3,
-    data: '232'
-  }
-]
+var artistNalbum = "Artista: Nombre album";
 
 class ArtistContent extends React.Component {
+
+  state = {
+    data: [],
+  }
+
+  componentDidMount() {
+    fetch('/api/artistas/all', {method: 'GET'})
+    .then(res => res.json())
+    .then(data => {
+      this.setState({data});
+      console.log(this.state.data);
+    })
+  }
+
     render() {
 
       const {classes} = this.props;
+      var {data} = this.state;
+      var {content} = this.props;
 
+      if (content === null) {
+        return(
+          <div className={classes.root} position="relative">
+            <AlbumGridList 
+              searchData={data} 
+              className={classes.abmGridList}
+            />
+          </div>
+        )
+      }
+      else if(content!=null) {
             return(
-                    <div className={classes.root} position="relative">
-                      <AlbumGridList searchData={searchData} className={classes.abmGridList}/>
-                    </div>
-            );
-    }
+              <div className={classes.root} position="relative">
+              <AlbumGridList 
+                searchData={content} 
+                className={classes.abmGridList}
+              />
+            </div>
+          )
+        }
+      }
 }
 
 export default withStyles(styles)(ArtistContent);

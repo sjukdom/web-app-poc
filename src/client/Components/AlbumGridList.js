@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import {GridList, GridListTile, Paper, Typography, createMuiTheme, MuiThemeProvider} from '@material-ui/core';
-import SongList from './SongList';
+import ASongList from './ArtistSongList';
 
 const theme = createMuiTheme({
     palette: {
@@ -21,10 +21,6 @@ const styles = theme => ({
   gridList: {
     width: 'auto',
     height: 'inherit',
-    //bottom: -10
-  },
-  gridListTile: {
-    //bottom: -10
   },
   paper: {
     padding: 5,
@@ -41,20 +37,22 @@ class AlbumGridList extends React.Component {
 
       return (
         <div className={classes.root}>
-          <GridList cellHeight={270} className={classes.gridList} spacing={1}>
-              {searchData.map(album => (
-                  <GridListTile key={album.id} cols={2} className={classes.gridListTile}>
-                    <Paper className={classes.paper}>
-                    <MuiThemeProvider theme={theme}>
-                      <Typography color="secondary">
-                        Artista: Nombre album
-                      </Typography>
-                    </MuiThemeProvider>
-                    </Paper>
-                    <SongList songs={Array.from(Array(11).keys())}/>
-                  </GridListTile>
+              {searchData.map(data => (
+                    <GridList cellHeight={270} className={classes.gridList} cols={1} spacing={1}>
+                    {data.albums.map(album => (
+                      <GridListTile key={album.id} cols={1} className={classes.gridListTile}>
+                      <Paper className={classes.paper}>
+                      <MuiThemeProvider theme={theme}>
+                        <Typography color="secondary">
+                          {data.nombre + " : " + album.titulo}
+                        </Typography>
+                      </MuiThemeProvider>
+                      </Paper>
+                      <ASongList songs={album.canciones}/>
+                      </GridListTile>
+                    ))}
+                    </GridList>
                 ))}
-          </GridList>
         </div>
       );
   }

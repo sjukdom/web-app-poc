@@ -3,7 +3,6 @@ const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
 // Modulos definidos por el usuario
-//const connectionADB = require("./database/artistsDB");
 
 // Crear la app de express.js
 const app = express();
