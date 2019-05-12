@@ -26,11 +26,13 @@ const styles = theme => ({
 
 class SongList extends React.Component {
     state = {
-        selectedIndex: 0,
+        selectedIndex: ""
     };
 
     handleListItemClick = (event, index) => {
         this.setState({ selectedIndex: index });
+        this.props.selectedSong(index)
+        console.log(index)
     };
 
     render () {

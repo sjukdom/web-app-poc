@@ -117,11 +117,17 @@ class UserContent extends React.Component {
 
     state = {
         value: 0,
+        song: ""
     };
 
     handleChange = (event, value) => {
         this.setState({ value });
     };
+
+    songSelected = (song) => {
+        this.setState({song: song});
+        this.props.songSelected(song);
+    }
 
     render() {
 
@@ -140,7 +146,7 @@ class UserContent extends React.Component {
                     </AppBar>
                 </MuiThemeProvider>
                 {
-                   value === 0 && <SongList songs={songs.sort(function(a, b) {
+                   value === 0 && <SongList selectedSong={this.songSelected} songs={songs.sort(function(a, b) {
                     if (a.nombre < b.nombre) {return -1}
                     if (a.nombre > b.nombre) {return 1}
                     return 0;
@@ -149,7 +155,7 @@ class UserContent extends React.Component {
                 })}/>
                 }
                 {
-                    value === 1 && <SongList songs={songs.sort(function(a, b) {
+                    value === 1 && <SongList selectedSong={this.songSelected} songs={songs.sort(function(a, b) {
                         if (a.album < b.album) {return -1}
                         if (a.album > b.album) {return 1}
                         return 0;
@@ -158,7 +164,7 @@ class UserContent extends React.Component {
                     })}/>
                 }
                 {
-                    value === 2 && <SongList songs={songs.sort(function(a, b) {
+                    value === 2 && <SongList selectedSong={this.songSelected} songs={songs.sort(function(a, b) {
                         if (a.titulo < b.titulo) {return -1}
                         if (a.titulo > b.titulo) {return 1}
                         return 0;
