@@ -8,12 +8,10 @@ import ListItemText from '@material-ui/core/ListItemText';
 const styles = theme => ({
     root: {
         width: 'auto',
-        //height: '100%',
         height: 'inherit',
         backgroundColor: theme.palette.background.paper,
         position: 'relative',
         overflow: 'scroll',
-        //maxHeight: 426,
       },
       ul: {
         backgroundColor: 'inherit',
@@ -50,7 +48,7 @@ class SongList extends React.Component {
                             onClick={event => this.handleListItemClick(event, item)}
                             className={classes.li}
                             divider>
-                            <ListItemText primary={`Item ${item}`} />
+                            <ListItemText primary={`${item}`} />
                         </ListItem>
                         ))}
                     </ul>

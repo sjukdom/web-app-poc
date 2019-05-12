@@ -40,6 +40,79 @@ const theme = createMuiTheme({
     },
   });
 
+const songs = [
+    {
+        nombre: "Venom",
+        titulo: "Welcome to Hell",
+        album: "Welcome to Hell"
+    },
+    {
+        nombre: "Venom",
+        titulo: "Buried Alive",
+        album: "Black Metal"
+    },
+    {
+        nombre: "Kase.O",
+        titulo: "Javat y Kamel",
+        album: "Jazz Magnetism"
+    },
+    {
+        nombre: "Kase.O",
+        titulo: "Basureta",
+        album: "El Circulo"
+    },
+    {
+        nombre: "Nach",
+        titulo: "Ser o no ser",
+        album: "Poesia Difusa"
+    },
+    {
+        nombre: "Nach",
+        titulo: "El camino del guerrero",
+        album: "Ars Magna"
+    },
+    {
+        nombre: "Sho-Hai",
+        titulo: "Polterhate",
+        ambum: "La ultima funcion"
+    },
+    {
+        nombre: "Sho-Hai",
+        titulo: "De paso",
+        album: "Doble Vida"
+    },
+    {
+        nombre: "Sho-Hai",
+        titulo: "Deep Deli",
+        album: "La ultima funcion"
+    },
+    {
+        nombre: "Crystal Castles",
+        titulo: "Vietnam",
+        album: "Crystal Castles II"
+    },
+    {
+        nombre: "Crystal Castles",
+        titulo: "Baptism",
+        album: "Crystal Castles II"
+    },
+    {
+        nombre: "Crystal Castles",
+        titulo: "Not in Love",
+        album: "Crystal Castles II"
+    },
+    {
+        nombre: "Crystal Castles",
+        titulo: "Crimewave",
+        album: "Crystal Castles I"
+    },
+    {
+        nombre: "Crystal Castles",
+        titulo: "Magic Spells",
+        album: "Crystal Castles I"
+    },
+];
+
 class UserContent extends React.Component {
 
     state = {
@@ -67,13 +140,31 @@ class UserContent extends React.Component {
                     </AppBar>
                 </MuiThemeProvider>
                 {
-                   value === 0 && <SongList songs={Array.from(Array(15).keys())}/>
+                   value === 0 && <SongList songs={songs.sort(function(a, b) {
+                    if (a.nombre < b.nombre) {return -1}
+                    if (a.nombre > b.nombre) {return 1}
+                    return 0;
+                }).map(eli => {
+                    return (eli.nombre + " : " + eli.titulo)
+                })}/>
                 }
                 {
-                    value === 1 && <SongList songs={Array.from(Array(15).keys())}/>
+                    value === 1 && <SongList songs={songs.sort(function(a, b) {
+                        if (a.album < b.album) {return -1}
+                        if (a.album > b.album) {return 1}
+                        return 0;
+                    }).map(eli => {
+                        return (eli.nombre + " : " + eli.titulo)
+                    })}/>
                 }
                 {
-                    value === 2 && <SongList songs={Array.from(Array(5).keys())}/>
+                    value === 2 && <SongList songs={songs.sort(function(a, b) {
+                        if (a.titulo < b.titulo) {return -1}
+                        if (a.titulo > b.titulo) {return 1}
+                        return 0;
+                    }).map(eli => {
+                        return (eli.nombre + " : " + eli.titulo)
+                    })}/>
                 }
             </div>
             )
