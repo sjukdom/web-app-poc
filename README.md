@@ -28,6 +28,22 @@ sudo apt install nodejs
 sudo apt install npm
 ```
 
+## Instalacion de MongoDB 
+Instalar la base de datos MongoDB:
+```
+sudo apt install -y mongodb
+```
+
+Verificar que esta activo el servicio:
+```
+sudo systemctl status mongodb
+```
+
+Crear base de datos de Artistas:
+```
+mongoimport --db ArtistasDB --collection artistas --drop --file src/database/Models/artistas.json --jsonArray
+```
+
 ## Inicializar el proyecto
 
 Para inicializar el proyecto de node.js e instalar los modulos, se debe 
@@ -52,4 +68,4 @@ Abrir el navegador de su preferencia y escribir la direccion: _localhost:3000_
 ## Sitio web hasta ahora
 El sitio web tiene la siguiente interfaz gráfica por el momento:
 
-![](images/website-04.png)
+![](images/website-final.png)
