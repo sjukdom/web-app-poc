@@ -126,14 +126,29 @@ var searchData = [
 var artistNalbum = "Artista: Nombre album";
 
 class ArtistContent extends React.Component {
+
+  state = {
+    data: []
+  }
+
+  componentDidMount() {
+    fetch('/api/artistas/all', {method: 'GET'})
+    .then(res => res.json())
+    .then(data => {
+      this.setState({data});
+      console.log(this.state.data);
+    })
+  }
+
     render() {
 
       const {classes} = this.props;
+      let {data} = this.state;
 
             return(
                     <div className={classes.root} position="relative">
                       <AlbumGridList 
-                        searchData={searchData} 
+                        searchData={data} 
                         className={classes.abmGridList}
                       />
                     </div>

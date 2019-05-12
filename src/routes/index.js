@@ -16,17 +16,36 @@ const router = Router();
 router.get("/artistas/all", (req, res) => {
   Artistas.find()
   .then(artists => {
-    res.json(
-      {
-        data: artists
-      }
-    )
+    res.json(artists)
   })
   .catch(err => {
     res.json({
       status: 'fail',
       message: err.message
     })
+  })
+});
+
+router.get("/artistas/nombre/:nombre", (req, res) => {
+  Artistas.find({nombre: req.params.nombre})
+  .then(artist => {
+    if (artist.length === 0) {
+      res.json(
+        {
+          status: 'Artist not found'
+        }
+      )
+    } else {
+      res.json(artist)
+    }
+  })
+  .catch(err => {
+    res.json(
+      {
+        status: 'fail',
+        message: err.message
+      }
+    )
   })
 });
 

@@ -41,21 +41,22 @@ class AlbumGridList extends React.Component {
 
       return (
         <div className={classes.root}>
-          <GridList cellHeight={270} className={classes.gridList} spacing={1}>
               {searchData.map(data => (
-                  <GridListTile key={data.id} cols={2} className={classes.gridListTile}>
-                    <Paper className={classes.paper}>
-                    <MuiThemeProvider theme={theme}>
-                      <Typography color="secondary">
-                        {data.nombreArtista + " : " + data.nombreAlbum}
-                      </Typography>
-                    </MuiThemeProvider>
-                    </Paper>
-                    {/* <ASongList songs={Array.from(Array(11).keys())}/> */}
-                    <ASongList songs={data.canciones}/>
-                  </GridListTile>
+                    <GridList cellHeight={270} className={classes.gridList} cols={1} spacing={1}>
+                    {data.albums.map(album => (
+                      <GridListTile key={data._id} cols={1} className={classes.gridListTile}>
+                      <Paper className={classes.paper}>
+                      <MuiThemeProvider theme={theme}>
+                        <Typography color="secondary">
+                          {data.nombre + " : " + album.titulo}
+                        </Typography>
+                      </MuiThemeProvider>
+                      </Paper>
+                      <ASongList songs={album.canciones}/>
+                      </GridListTile>
+                    ))}
+                    </GridList>
                 ))}
-          </GridList>
         </div>
       );
   }

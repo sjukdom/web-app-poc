@@ -1,6 +1,5 @@
 [
 {
-	"id": 0,
 	"nombre": "Kase.O",
 	"direccion": "Zaragosa, España",
 	"telefono": "5557072908",
@@ -87,7 +86,6 @@
 	]
 },
 {
-   "id": 1,
 	"nombre": "Iron Maiden",
 	"direccion": "Worksop, Nottinghamshire",
 	"telefono": "5566674058",
@@ -170,7 +168,6 @@
    ]
 },
 {
-   "id": 2,
 	"nombre": "Venom",
 	"direccion": "England",
 	"telefono": "5566674058",
@@ -213,7 +210,6 @@
    ]
 },
 {
-   "id": 3,
 	"nombre": "Nach",
 	"direccion": "Albacete, España",
 	"telefono": "5507556766",
@@ -270,7 +266,6 @@
    ]
 },
 {
-   "id": 4,
 	"nombre": "Sho-Hai",
 	"direccion": "Zaragosa, España",
 	"telefono": "5544557809",
@@ -321,7 +316,6 @@
    ]
 },
 {
-   "id": 5,
 	"nombre": "Cartel de Santa",
 	"direccion": "Monterrey, Nuevo Leon, Mexico",
 	"telefono": "5500776323",
@@ -374,7 +368,6 @@
    ]
 },
 {
-   "id": 6,
 	"nombre": "Crystal Castles",
 	"direccion": "Toronto, Ontario, Ca",
 	"telefono": "5570747879",
@@ -425,7 +418,6 @@
    ]
 },
 {
-   "id": 7,
 	"nombre": "Lil Peep",
 	"direccion": "Allentown, Pensilvania",
 	"telefono": "5529343482",
@@ -451,7 +443,6 @@
    ]
 },
 {
-   "id": 8,
 	"nombre": "Snoop Dogg",
 	"direccion": "Long Beach, California, Estados Unidos",
 	"telefono": "5542042042",
