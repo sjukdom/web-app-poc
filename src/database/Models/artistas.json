@@ -1,0 +1,514 @@
+[
+{
+	"id": 0,
+	"nombre": "Kase.O",
+	"direccion": "Zaragosa, España",
+	"telefono": "5557072908",
+	"email": "kaseo@gmail.com",
+	"albums": [
+		{
+			"titulo": "Rompecabezas",
+			"canciones": [
+				"Intro",
+    			"Canción De Un Suicida",
+    			"El Pecador",
+    			"Mata Ricos",
+    			"Rompecabezas",
+    			"Diablo Con El Hombre",
+    			"Rimando Para Las Cucarachas",
+    			"Saber Todo De Algún Modo",
+   			"Maldad",
+    			"Revolución",
+    			"Fosa Común",
+    			"De La Jota"
+			],
+			"precio": 150
+		},
+		{
+			"titulo": "Dos Rombos",
+			"canciones": [
+				"Intro 95",
+				"Verdadero Rap",
+				"Este Soy Yo",
+				"Somos Lo Mismo II (con Rapid)",
+				"La K Y La L (con Larone Mc)",
+				"Evolución",
+				"Interludio",
+				"Poker De Ases (con Lírico, Hate y Rebel)",
+				"Gangster Del Amor",
+				"Soy De Aragón"
+			],
+			"precio": 150
+		},
+		{
+			"titulo": "Jazz Magnetism",
+			"canciones": [
+				"Libertad",
+				"Como el sol (2011)",
+            "Trabajos manuales AKA Geto Boys",
+				"A solas con un ritmo (2011)",
+				"Suave seda AKA Naci Muerto",
+				"Quieres (2011) con Kami",
+				"Que no hay alcohol (2011)",
+				"Domingos de cal AKA Blue Pepper",
+				"En 2 minutos (2011)",
+				"Renacimiento",
+				"Presente Kamikaze",
+				"Boogaloo AKA Tarantula",
+				"Tributo a Mr. Scarface (2011)",
+				"Mc Escandoloso Exposito",
+				"Javat y Kamel (2011)"
+			],
+			"precio": 200
+		},
+		{
+			"titulo": "El Circulo",
+			"canciones": [
+				   "Intro (El Círculo)",
+					"Esto no para",
+					"Yemen",
+					"Triste",
+					"Guapo tarde",
+					"Viejos ciegos (con Xhelazz y Sho-Hai)",
+					"Interludio - Quieren copiar",
+					"Pavos reales",
+					"Mitad y mitad",
+					"Mazas y catapultas",
+					"Amor sin cláusulas",
+					"No sé que voy a hacer (Booty song)",
+					"Interludio - Risoterapia",
+					"Rap superdotado (con Violadores del verso)",
+					"Repartiendo arte",
+					"Basureta (Tiempos raros)",
+					"Outro"
+			],
+			"precio": 250
+		}
+	]
+},
+{
+   "id": 1,
+	"nombre": "Iron Maiden",
+	"direccion": "Worksop, Nottinghamshire",
+	"telefono": "5566674058",
+   "email": "ironmaiden@gmail.com",
+   "albums": [
+      {
+         "titulo": "Iron Maiden",
+         "canciones": [
+            "Prowler",
+            "Remember Tomorrow",
+            "Running Free",
+            "Phantom of the Opera",
+            "Transylvania",
+            "Strange World",
+            "Sanctuary",
+            "Charlotte the Harlot",
+            "Iron Maiden"
+         ],
+         "precio": 220
+      },
+      {
+         "titulo": "Killers",
+         "canciones": [
+            "The Ides of March",
+            "Wrathchild",
+            "Murders in the Rue Morgue",
+            "Another Life",
+            "Genghis Khan",
+            "Innocent Exile",
+            "Killers",
+            "Prodigal Son",
+            "Purgatory",
+            "Drifter"
+         ],
+         "precio": 220
+      },
+      {
+         "titulo": "The number of the beast",
+         "canciones": [
+            "Invaders",
+            "Children of the Damned",
+            "The Prisoner",
+            "22 Acadia Avenue",
+            "The Number of the Beast",
+            "Run to the Hills",
+            "Gangland",
+            "Hallowed Be Thy Name"
+         ],
+         "precio": 220
+      },
+      {
+         "titulo": "Piece of mind",
+         "canciones": [
+            "Aces High",
+            "2 Minutes to Midnight",
+            "Losfer Words (Big 'Orra)",
+            "Flash of the Blade",
+            "The Duellist",
+            "Back in the Village",
+            "Powerslave",
+            "Rime of the Ancient Mariner"
+         ],
+         "precio": 220
+      },
+      {
+         "titulo": "Powerslave",
+         "canciones": [
+            "Where Eagles Dare",
+            "Revelations",
+            "Flight of Icarus",
+            "Die With Your Boots On",
+            "The Trooper",
+            "Still Life",
+            "Quest for Life",
+            "Sun and Steel",
+            "To Tame a Land"
+         ],
+         "precio": 220
+      }
+   ]
+},
+{
+   "id": 2,
+	"nombre": "Venom",
+	"direccion": "England",
+	"telefono": "5566674058",
+   "email": "venombm@gmail.com",
+   "albums": [
+      {
+         "titulo": "Welcome to Hell",
+         "canciones": [
+            "Sons of Satan",
+            "Welcome to Hell",
+            "Schizo",
+            "Mayhem With Mercy",
+            "Poison",
+            "Live Like and Angel",
+            "Witching Hour",
+            "One Thousand Days in Sodom",
+            "Angel Dust",
+            "In League With Satan",
+            "Red Light Fever"
+         ],
+         "precio": 200
+      },
+      {
+         "titulo": "Black Metal",
+         "canciones": [
+            "Black Metal",
+            "To Hell and Back",
+            "Buried Alive",
+            "Raise the Dead",
+            "Teachers' Pet",
+            "Leave Me in Hell",
+            "Sacrifice",
+            "Heaven's on Fire",
+            "Countess Bathory",
+            "Dont't Burn the Witch",
+            "At War with Satan"
+         ],
+         "precio": 200
+      }
+   ]
+},
+{
+   "id": 3,
+	"nombre": "Nach",
+	"direccion": "Albacete, España",
+	"telefono": "5507556766",
+   "email": "nach_scratch@gmail.com",
+   "albums": [
+      {
+         "titulo": "Posesia Difusa",
+         "canciones": [
+            "El regreso",
+            "Desafio",
+            "Walkman",
+            "Rap vida 2001",
+            "Mi Pais con Quiroga",
+            "Chico Problematico",
+            "Poesia Difusa",
+            "Ser o no ser",
+            "Rap vida 2002",
+            "Calles",
+            "El sexto mandamiento",
+            "En el punto de mira",
+            "La voz de los grandes",
+            "Rap vida 2003",
+            "Calles",
+            "Amor libre",
+            "El club de los olvidados",
+            "El cuenta cuentos",
+            "Gracias"
+         ],
+         "precio": 250
+      },
+      {
+         "titulo": "Ars Magna",
+         "canciones": [
+            "Alfa",
+            "El camino del guerrero",
+            "Repaso de mis pasos",
+            "Barras y estrellas",
+            "2055",
+            "El dia que murio el arte",
+            "El tiempo escapa",
+            "Pandora",
+            "No bailes",
+            "Interludio 2",
+            "Infinito",
+            "Palabras",
+            "Tipos de MC's",
+            "Tras este escenario",
+            "Interludio 3",
+            "Binomio",
+            "Mi propio cielo"
+         ],
+         "precio": 250
+      }
+   ]
+},
+{
+   "id": 4,
+	"nombre": "Sho-Hai",
+	"direccion": "Zaragosa, España",
+	"telefono": "5544557809",
+   "email": "sho_hai@gmail.com",
+   "albums": [
+      {
+         "titulo": "Doble Vida",
+         "canciones": [
+            "Entro",
+            "De paso",
+            "Para ser un rapper",
+            "Gracias y desgracias de una farola",
+            "Oceano",
+            "Hodio",
+            "Cuando voy",
+            "SHO-HAI",
+            "Infierno",
+            "...Ella",
+            "Miss Misserias",
+            "La cupula",
+            "Solo son birras",
+            "Nada y todo",
+            "Infierno con guitarras"
+         ],
+         "precio": 220
+      },
+      {
+         "titulo": "La ultima funcion",
+         "canciones": [
+            "El preferido de la luna",
+            "Desnudo",
+            "100%",
+            "Dando brea",
+            "Sombras",
+            "La bella muerte",
+            "Polterhate",
+            "Retrato de un retrete",
+            "Servero correctivo",
+            "El amante nefasto",
+            "Deep Deli",
+            "Dislexia",
+            "Pequenos lujos",
+            "Hablar por hablar",
+            "Dando brea"
+         ],
+         "precio": 220
+      }
+   ]
+},
+{
+   "id": 5,
+	"nombre": "Cartel de Santa",
+	"direccion": "Monterrey, Nuevo Leon, Mexico",
+	"telefono": "5500776323",
+   "email": "ppcdsalvc@gmail.com",
+   "albums": [
+      {
+         "titulo": "Cartel de Santa",
+         "canciones": [
+            "Intro",
+            "Todas Mueren Por Mí",
+            "Asesino de Asesinos",
+            "Cannabis",
+            "Jake Mate",
+            "Rima 1",
+            "Burreros",
+            "Perros",
+            "Quinto Elemento",
+            "Rima 2",
+            "NTN",
+            "La Pelotona",
+            "Rima 3",
+            "Super MC's",
+            "Mi Ciudad",
+            "Para Aquí O Para Llevar",
+            "Chinga a los Racistas",
+            "Rima 4",
+            "Factor Miedo",	
+            "Intenta rimar"
+         ],
+         "precio": 200
+      },
+      {
+         "titulo": "Volumen ProIIIbido",
+         "canciones": [
+            "Mira quien vuelve al 100",
+            "Cheka wey",
+            "La ranfla del Cartel",
+            "Dejate caer",
+            "Hey si me ven",
+            "Mexico lindo y bandido",
+            "2 mujeres en mi cama",
+            "Si son bien jotos",
+            "Yo me la perez prado",
+            "Conexion vieja escuela",
+            "Subele a la greibol",
+            "Ahora si voy a lokear"
+         ],
+         "precio": 200
+      }
+   ]
+},
+{
+   "id": 6,
+	"nombre": "Crystal Castles",
+	"direccion": "Toronto, Ontario, Ca",
+	"telefono": "5570747879",
+   "email": "crystalcastlesn@gmail.com",
+   "albums": [
+      {
+         "titulo": "Crystal Castles",
+         "canciones": [
+            "Untrust Us",
+            "Alice Practice",
+            "Crimewave",
+            "Magic Spells",
+            "Xxzxcuzx Me",
+            "Air War",
+            "Courtship Dating",
+            "Good Time",
+            "1991",
+            "Vanished",
+            "Knights",
+            "Love and Caring",
+            "Through the Hosiery",
+            "Reckless",
+            "Black Panter",
+            "Tell Me What to Shallow"
+         ],
+         "precio": 200
+      },
+      {
+         "titulo": "Crystal Castles II",
+         "canciones": [
+            "Fainting Spells",
+            "Celestica",
+            "Doe Deer",
+            "Baptism",	
+            "Year of Silence",
+            "Empathy",
+            "Suffocation",
+            "Violent Dreams",
+            "Vietnam",
+            "Birds",
+            "Pap Smear",
+            "Not in Love",
+            "Intimate",
+            "I Am Made of Chalk"
+         ],
+         "precio": 200
+      }
+   ]
+},
+{
+   "id": 7,
+	"nombre": "Lil Peep",
+	"direccion": "Allentown, Pensilvania",
+	"telefono": "5529343482",
+   "email": "lilpeep@gmail.com",
+   "albums": [
+      {
+         "titulo": "Come Over When You are Sober",
+         "canciones": [
+            "Broken Smile (My All)",
+            "Runaway",
+            "Sex with My Ex",
+            "Cry Alone",
+            "Leanin'",
+            "16 Lines",
+            "Life Is Beautiful",
+            "Hate Me",
+            "IDGAF",
+            "White Girl",
+            "Fingers"
+         ],
+         "precio": 250
+      }
+   ]
+},
+{
+   "id": 8,
+	"nombre": "Snoop Dogg",
+	"direccion": "Long Beach, California, Estados Unidos",
+	"telefono": "5542042042",
+   "email": "snoopfuckingdogg@gmail.com",
+   "albums": [
+      {
+         "titulo": "Tha Doggfather",
+         "canciones": [
+            "Intro",
+            "Doggfather",
+            "Ride 4 Me",
+            "Up Jump tha Boogie",
+            "Freestyle Conversation",
+            "When I Grow Up",
+            "Snoop Bounce",
+            "Gold Rush",
+            "(Tear 'Em Off) Me and My Doggz",
+            "You Thought",
+            "Vapors",
+            "Groupie",
+            "2001",
+            "Sixx Minutes",
+            "(O.J) Wake Up",
+            "Snoop's Upside Ya Head",
+            "Blueberry",
+            "Traffic Jam",
+            "Doggyland",
+            "Downtown Assassins",
+            "Outro"
+         ],
+         "precio": 350
+      },
+      {
+         "titulo": "Doggumentary",
+         "canciones": [
+            "Toyz N Da Hood",
+            "My Own Way",
+            "My Fucn House",
+            "Peer Pressure",
+            "I Don't Need No Bitch", 
+            "Platinum",
+            "Boom",
+            "We Rest N Cali",
+            "El Lay",
+            "Gangbang Rookie",
+            "This Weed Iz Mine",
+            "Wet",
+            "Take U Home",
+            "Sumthin Like This Night",
+            "Superman",
+            "Eyez Closed", 
+            "Raised in da Hood",
+            "It's D Only Thang",
+            "Cold Game"
+      ],
+         "precio": 350
+      }
+   ]
+}
+]

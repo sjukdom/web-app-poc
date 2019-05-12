@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {withStyles} from '@material-ui/core';
 import List from '@material-ui/core/List';
@@ -26,7 +25,7 @@ const styles = theme => ({
       }
 });
 
-class SongList extends React.Component {
+class ASongList extends React.Component {
     state = {
         selectedIndex: 0,
     };
@@ -50,7 +49,7 @@ class SongList extends React.Component {
                             onClick={event => this.handleListItemClick(event, item)}
                             className={classes.li}
                             divider>
-                            <ListItemText primary={`Item ${item}`} />
+                            <ListItemText primary={item}/>
                         </ListItem>
                         ))}
                     </ul>
@@ -68,4 +67,4 @@ class SongList extends React.Component {
 
 }
 
-export default withStyles(styles)(SongList);
+export default withStyles(styles)(ASongList);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import {GridList, GridListTile, Paper, Typography, createMuiTheme, MuiThemeProvider} from '@material-ui/core';
-import SongList from './SongList';
+import ASongList from './ArtistSongList';
 
 const theme = createMuiTheme({
     palette: {
@@ -42,16 +42,17 @@ class AlbumGridList extends React.Component {
       return (
         <div className={classes.root}>
           <GridList cellHeight={270} className={classes.gridList} spacing={1}>
-              {searchData.map(album => (
-                  <GridListTile key={album.id} cols={2} className={classes.gridListTile}>
+              {searchData.map(data => (
+                  <GridListTile key={data.id} cols={2} className={classes.gridListTile}>
                     <Paper className={classes.paper}>
                     <MuiThemeProvider theme={theme}>
                       <Typography color="secondary">
-                        Artista: Nombre album
+                        {data.nombreArtista + " : " + data.nombreAlbum}
                       </Typography>
                     </MuiThemeProvider>
                     </Paper>
-                    <SongList songs={Array.from(Array(11).keys())}/>
+                    {/* <ASongList songs={Array.from(Array(11).keys())}/> */}
+                    <ASongList songs={data.canciones}/>
                   </GridListTile>
                 ))}
           </GridList>
